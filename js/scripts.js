@@ -4,7 +4,9 @@ const nombre = document.getElementById('name');
 
 window.onscroll = () => {
     const anchoFondo = (window.pageYOffset / altura) * 900;
-    fondo.style.width = anchoFondo + '%';
+    if(fondo) {
+        fondo.style.width = anchoFondo + '%';
+    }
     if(anchoFondo >= 100) {
         nombre.style.alignItems = 'flex-end'
     } else {
@@ -29,10 +31,11 @@ imgNames.forEach(function(img, index){
     names[index] = img.getAttribute('src')
 })
 
+if(imageView){
 imageView.addEventListener('click', function(){
     this.style.display = "none";
     imageBox.style.display = "none";
-})
+})}
 
 
 zoomBtn.forEach(function(btn, index){
@@ -51,6 +54,7 @@ function currentImageDisplay(position){
     imageBox.style.background = `url("${position}") center/contain no-repeat`;
 }
 
+if(prevBtn){
 prevBtn.addEventListener('click', function(){
     currentImageIdx--;
     console.log(currentImageIdx);
@@ -58,12 +62,13 @@ prevBtn.addEventListener('click', function(){
         currentImageIdx = names.length - 1;
     }
     currentImageDisplay(names[currentImageIdx]);
-})
+})}
 
+if(nextBtn){
 nextBtn.addEventListener('click', function(){
     currentImageIdx++;
     if(currentImageIdx === names.length){
         currentImageIdx = 0;
     }
     currentImageDisplay(names[currentImageIdx]);
-})
+})}
