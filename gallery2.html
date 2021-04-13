@@ -25,8 +25,21 @@
     </nav>
 
     <h2 class="gallery__title"><a href="gallery.html">Galería 1</a><span> | </span><a href="gallery2.html">Galería 2</a></h2>
-    <div class="container categories">
-        <article class='img-container'>
+
+    <section class="filter">
+        <ul class="filter__container">
+            <li class="filter__option filter__option-active" data-filter="all">Todas</li>
+            <li class="filter__option" data-filter="models">Modelos</li>
+            <li class="filter__option" data-filter="portraits">Retratos</li>
+            <li class="filter__option" data-filter="colors">Color</li>
+            <li class="filter__option" data-filter="pastels">Pasteles</li>
+            <li class="filter__option" data-filter="lights">Luz</li>
+            <li class="filter__option" data-filter="oil">Óleos</li>
+        </ul>
+    </section>
+
+    <div class="container gallery">
+        <article class='artwork modelos'>
             <div class="pic">
                 <div class="front">
                     <img class='image' src="img/cuadros/Jaime Rodríguez Camisa editada.jpg" alt="Camisa.jpg">
@@ -40,10 +53,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork oil">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/jaime rodríguez.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/jaime rodríguez.jpg" alt="Aguaates.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -54,10 +67,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork models">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/Jaime Rodríguez_-10.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/Jaime Rodríguez_-10.jpg" alt="Mujer.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -68,10 +81,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork portraits">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/Jaime Rodríguez_-11.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/Jaime Rodríguez_-11.jpg" alt="Bebé.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -82,10 +95,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork models">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/manos.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/manos.jpg" alt="Manos.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -96,10 +109,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork lights">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/silueta_espalda.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/silueta_espalda.jpg" alt="Penumbra.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -110,10 +123,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork portraits">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/pepe.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/pepe.jpg" alt="Pepe.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -124,10 +137,10 @@
                 </div>
             </div>
         </article>
-        <article>
+        <article class="artwork colors">
             <div class="pic">
                 <div class="front">
-                    <img class='image' src="img/cuadros/camisa_color.jpg" alt="Camisa.jpg">
+                    <img class='image' src="img/cuadros/camisa_color.jpg" alt="Camisa color.jpg">
                 </div>
                 <div class="back">
                     <div class="back-content middle">
@@ -148,6 +161,7 @@
         </div>
     </div>
 
+    <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

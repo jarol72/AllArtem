@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    $('.filter__option').click(function(){
+        const value = $(this).attr('data-filter');
+        if(value == 'all'){
+            $('.artwork').show('1000');
+        } else {
+            $('.artwork').not('.' + value).hide('1000');
+            $('.artwork').filter('.' + value).show('1000');
+        }
+    })
+
+    // add active class on selected item
+    $('.filter__option').click(function(){
+        $(this).addClass('filter__option-active').siblings().removeClass('filter__option-active');
+    })
+})
+
 const altura = document.body.scrollHeight - window.innerHeight;
 const fondo = document.getElementById('fondo');
 const nombre = document.getElementById('name');
