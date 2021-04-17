@@ -47,7 +47,7 @@ p {
 /* ++++++++++ HEADER +++++++++++++++ */
 .header {
     background-image: url('../img/cuadros/Panioleta.jpg');
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -64,10 +64,10 @@ p {
 }
 
 .header__name {
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 100vh;
     padding: 2vh;
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 3em;
     text-align: center;
     font-weight: 400;
@@ -126,6 +126,7 @@ p {
     transition: 0.5s ease all;
     color: var(--blue-jay-white);
     text-decoration: none;
+    font-style: italic;
 }
 
 .menu__link:hover {
@@ -173,24 +174,28 @@ p {
     padding: 20px;
 }
 
-.inspiration .title {
+.inspiration__title {
     width: 100%;
     font-size: .5em;
     text-transform: uppercase;
     display: inline-block;
-    
 }
 
 /* ++++++++++ CATEGORIES +++++++++++++++ */
+.container--categories {
+    display: flex;
+    justify-content: center;
+}
 .categories {
+    width: 100%;
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .card__image {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -239,7 +244,7 @@ p {
     color: var(--blue-jay-white);
     font-size: .5em;
     transition: .3s ease all;
-    
+    padding: 5px;
 }
 
 .btn__products:hover {
@@ -449,3 +454,121 @@ p {
 #next-btn:hover, #prev-btn:hover{
     opacity: 0.6;
 }
+
+/* +++++++++++++++++ MEDIA QUERY ++++++++++++++++++ */
+
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+    .header__name {
+        font-size: 1.2em;
+    }
+
+    /* .categories {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    } */
+}
+
+@media only screen and (min-width : 411px) {
+    .header__name {
+        font-size: 1.8em;
+    }
+  }
+
+  @media only screen and (min-width : 425px) {
+    .header__name {
+        font-size: 1.3em;
+    }
+  }
+
+  @media only screen and (min-width : 425px) and (orientation: landscape) {
+    .header__name {
+        font-size: .9em;
+    }
+
+    .inspiration__title {
+        font-size: .8em;
+    }
+
+    .btn__products {
+        height: 95%;
+        font-size: 1.2em;
+    }
+
+    .contact__info {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: var(--blue-jay-blue);
+        color: var(--blue-jay-white);
+        text-align: center
+    }
+  }
+
+@media only screen and (min-width : 540px) {
+    .header__name {
+        font-size: 2em;
+    }
+  }
+  
+  @media only screen and (min-width: 540px) and (orientation: landscape) {
+      .header__name {
+          font-size: 1.4em;
+      }
+  }
+
+@media only screen and (min-width : 768px) {
+  .header__name {
+      font-size: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    .header__name {
+        font-size: 1.7em;
+    }
+
+    .categories {
+        gap: 20px;
+    }
+/* **************************************************/
+    .menu__icon {
+        display: none;
+        
+    }
+    
+    .navbar {
+        z-index: 1000;
+        position: absolute;
+        top: 100vh;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Noto Serif', serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu__link {
+        display: inline-block;
+        text-align: center;
+    }
+/* ******************************************** */
+}
+
+@media only screen and (min-width : 1024px) {
+    .header__name {
+        font-size: 1.8em;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) and (orientation: landscape) {
+      .header__name {
+          font-size: 2.5em;
+      }
+  }
