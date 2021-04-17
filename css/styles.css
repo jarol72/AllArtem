@@ -34,8 +34,9 @@
 }
 
 body {
-    background-color: var(--body-background);
-    font-size: 20px;
+    /* background-color: var(--body-background); */
+    background-color: gray;
+    font-size: 40px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -44,7 +45,7 @@ p {
 }
 
 /* ++++++++++ HEADER +++++++++++++++ */
-.contenido-header {
+.header {
     background-image: url('../img/cuadros/Panioleta.jpg');
     width: 100%;
     height: 100vh;
@@ -53,20 +54,22 @@ p {
     background-attachment: fixed;
 }
 
-.contenido-header .fondo {
+.header__fondo {
     background-image: url('../img/cuadros/silueta_blanca_costado\ \(copia\).jpg');
     width: 0%;
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
     background-position: center;
     background-size: cover;
 }
 
-.contenido-header .name {
+.header__name {
     width: calc(100vw - 20px);
     height: 100vh;
-    padding: 20px;
-    font-size: 70px;
+    padding: 2vh;
+    font-size: 1em;
+    line-height: 3em;
+    text-align: center;
     font-weight: 400;
     font-family: 'Noto Serif', serif;
     font-style: italic;
@@ -77,41 +80,61 @@ p {
     mix-blend-mode: hard-light;
 }
 
-.menu {
-    background-color: var(--blue-jay-blue);
-    width: 100%;
-    position: sticky;
+.menu__icon {
+    position: absolute;
     top: 0;
-    padding: .3vh;
-    z-index: 999;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    margin-bottom: 30px;
+    left: 0;
+    font-size: .4em;
+    color: var(--blue-jay-blue);
+    padding: 8px;
+    z-index: 2000;
 }
 
-.menu a {
-    display: inline-block;
-    padding: .3vh 1.9em;
-    font-size: 1em;
+.navbar {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    width: 40%
+}
+
+.menu {
+    position: absolute;
+    top: -1000PX;
+    left: -0%;
+    width: 100%;
+    font-family: 'Noto Serif', serif;
+}
+
+.menu-active .menu__icon{
+    color: var(--blue-jay-white);
+    width: 100%;
     background-color: var(--blue-jay-blue);
-    margin: 0px 10px;
+}
+
+.menu-active .menu{
+    top: .9em
+
+}
+
+
+.menu__link {
+    display: block;
+    width: 100%;
+    padding: 1vh;
+    font-size: .4em;
+    background-color: var(--blue-jay-blue);
     transition: 0.5s ease all;
     color: var(--blue-jay-white);
     text-decoration: none;
 }
 
-.menu a:hover {
-    transform: translateY(18px);
+.menu__link:hover {
+    transform: translateY(9px);
     background-color: var(--blue);
 }
 
 /* ++++++++++ CONTAINER +++++++++++++++ */
 .container {
-    max-width: 80%;
-    margin: 0px auto;
     text-align: center;
 }
 
@@ -151,8 +174,8 @@ p {
 }
 
 .inspiration .title {
-    width: 70%;
-    font-size: 35px;
+    width: 100%;
+    font-size: .5em;
     text-transform: uppercase;
     display: inline-block;
     
@@ -165,18 +188,18 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.categories img {
+.card__image {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-.categories .card {
+.card {
     position: relative;
     width: 100%;
 }
 
-.categories .overlay {
+.card__overlay {
     width: 0%;
     height: 100%;
     position: absolute;
@@ -188,19 +211,19 @@ p {
     transition: .5s ease all;
 }
 
-.categories .card:hover .overlay {
+.card:hover .card__overlay {
     width: 100%;
     opacity: .8;
     cursor: pointer
 }
 
-.categories .card .overlay .overlay-text {
+.card__overlay__text {
     top: 50%;
     left: 50%;
     position: absolute;
     white-space: nowrap;
     color: var(--blue-jay-white);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 700;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -210,15 +233,16 @@ p {
 
 
 /* ++++++++++ PRODUCTS BUTTON +++++++++++++++ */
-.btn-productos {
+.btn__products {
+    display: inline;
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
-    font-size: 2em;
+    font-size: .5em;
     transition: .3s ease all;
-    height: 93.5%;
+    
 }
 
-.btn-productos:hover {
+.btn__products:hover {
     background-color: transparent;
     color: var(--blue-jay-blue);
     border: 2px solid var(--blue-jay-blue);
@@ -237,7 +261,7 @@ p {
     margin-bottom: 60px;
 }
 
-.separator p {
+.separator__parag {
     margin: 40px 0px;
     width: 100%;
     height: 100%;
@@ -256,17 +280,24 @@ p {
 }
 
 .contact__info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
+    width: 100%;
+    /* display: flex; */
+    /* flex-flow: column; */
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
+    text-align: center
 }
 
-.contact__info p {
+.contact__link {
+    font-size: .5em;
+    color: var(--blue-jay-white);
+    text-decoration: none;
     text-align: center;
     padding: 10px;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fas, .far, .fab {

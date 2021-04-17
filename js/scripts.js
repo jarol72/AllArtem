@@ -13,6 +13,14 @@ $(document).ready(function(){
     $('.filter__option').click(function(){
         $(this).addClass('filter__option-active').siblings().removeClass('filter__option-active');
     })
+
+})
+
+// +++++++++++++ MENÚ ANIMATION ++++++++++++++
+$(document).ready(function(){
+    $('.navbar').click(function(){
+        $(this).toggleClass('menu-active');
+    })
 })
 
 const altura = document.body.scrollHeight - window.innerHeight;

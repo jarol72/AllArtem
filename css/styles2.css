@@ -283,13 +283,13 @@ p {
 .filter__container {
     display: flex;
     width: 100%;
+    list-style: none;
     justify-content: center;
 }
 
 .filter__option {
     margin: 5px;
     padding: 10px 30px;
-    list-style: none;
     background-color: #eee;
     cursor: pointer
 }
