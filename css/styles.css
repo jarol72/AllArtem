@@ -80,16 +80,6 @@ p {
     mix-blend-mode: hard-light;
 }
 
-.menu__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: .4em;
-    color: var(--blue-jay-blue);
-    padding: 8px;
-    z-index: 2000;
-}
-
 .navbar {
     z-index: 1000;
     position: absolute;
@@ -105,17 +95,25 @@ p {
     font-family: 'Noto Serif', serif;
 }
 
-.menu-active .menu__icon{
+.menu__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: .4em;
+    color: var(--blue-jay-blue);
+    padding: 8px;
+    z-index: 2000;
+}
+
+.menu-active .menu__icon {
     color: var(--blue-jay-white);
     width: 100%;
     background-color: var(--blue-jay-blue);
 }
 
-.menu-active .menu{
+.menu-active .menu {
     top: .9em
-
 }
-
 
 .menu__link {
     display: block;
@@ -137,10 +135,14 @@ p {
 /* ++++++++++ CONTAINER +++++++++++++++ */
 .container {
     text-align: center;
+    margin-top: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 20px
 }
 
 /* ++++++++++ SUBTÍTULO +++++++++++++++ */
-.subtitle {
+.inspiration__subtitle {
     font-size: 20px;
     color: var(--blue);
     font-family: "Noto Serif", serif;
@@ -149,14 +151,14 @@ p {
     text-transform: uppercase;
 }
 
-.subtitle span {
+.inspiration__subtitle span {
     background-color: gainsboro;
     padding: 0px 15px;
     z-index: 99;
     position: relative;
 }
 
-.subtitle::after {
+.inspiration__subtitle::after {
     content: '';
     display: inline-block;
     height: 2px;
@@ -170,7 +172,7 @@ p {
 /* ++++++++++ QUIEN +++++++++++++++ */
 .inspiration {
     margin-bottom: 60px;
-    background-color: rgba(243, 243, 243, .4);
+    background-color: #bcbcbc;
     padding: 20px;
 }
 
@@ -186,6 +188,7 @@ p {
     display: flex;
     justify-content: center;
 }
+
 .categories {
     width: 100%;
     display: grid;
@@ -305,13 +308,15 @@ p {
     align-items: center;
 }
 
-.fas, .far, .fab {
+.fas,
+.far,
+.fab {
     margin-right: 10px;
     font-size: 1.5em;
 }
 
 /* ++++++++++ GALLERY FILTER +++++++++++++++ */
-.filter{
+.filter {
     margin: 30px 0px;
     width: 100%
 }
@@ -366,7 +371,8 @@ p {
     cursor: pointer;
 }
 
-.front, .back {
+.front,
+.back {
     width: 100%;
     height: 100%;
     border: 1px solid var(--blue-jay-blue);
@@ -399,16 +405,16 @@ p {
     width: 100%;
 }
 
-.pic:hover > .front {
+.pic:hover>.front {
     transform: perspective(600px) rotateY(-180deg)
 }
 
-.pic:hover > .back {
+.pic:hover>.back {
     transform: perspective(600px) rotateY(0deg)
 }
 
 /* ++++++++++ ZOOM VIEWER +++++++++++++++ */
-.image-view{
+.image-view {
     position: fixed;
     top: 0;
     left: 0;
@@ -418,8 +424,8 @@ p {
     display: none;
 }
 
-.image-box{
-    width:70vw;
+.image-box {
+    width: 70vw;
     height: 80vh;
     position: fixed;
     top: 50%;
@@ -429,7 +435,8 @@ p {
     display: none;
 }
 
-#prev-btn, #next-btn{
+#prev-btn,
+#next-btn {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
@@ -441,17 +448,18 @@ p {
     cursor: pointer;
 }
 
-#prev-btn{
+#prev-btn {
     border-right: 40px solid grey;
     left: -50px;
 }
 
-#next-btn{
+#next-btn {
     border-left: 40px solid grey;
     right: -50px;
 }
 
-#next-btn:hover, #prev-btn:hover{
+#next-btn:hover,
+#prev-btn:hover {
     opacity: 0.6;
 }
 
@@ -472,15 +480,15 @@ p {
     .header__name {
         font-size: 1.8em;
     }
-  }
+}
 
-  @media only screen and (min-width : 425px) {
+@media only screen and (min-width : 425px) {
     .header__name {
         font-size: 1.3em;
     }
-  }
+}
 
-  @media only screen and (min-width : 425px) and (orientation: landscape) {
+@media only screen and (min-width : 425px) and (orientation: landscape) {
     .header__name {
         font-size: .9em;
     }
@@ -502,48 +510,57 @@ p {
         color: var(--blue-jay-white);
         text-align: center
     }
-  }
+}
 
 @media only screen and (min-width : 540px) {
     .header__name {
         font-size: 2em;
     }
-  }
-  
-  @media only screen and (min-width: 540px) and (orientation: landscape) {
-      .header__name {
-          font-size: 1.4em;
-      }
-  }
-
-@media only screen and (min-width : 768px) {
-  .header__name {
-      font-size: 1.4em;
-  }
 }
 
-@media only screen and (min-width: 768px) and (orientation: landscape) {
+@media only screen and (min-width: 540px) and (orientation: landscape) {
     .header__name {
-        font-size: 1.7em;
+        font-size: 1.4em;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .header__name {
+        font-size: 1.4em;
     }
 
     .categories {
         gap: 20px;
     }
-/* **************************************************/
-    .menu__icon {
-        display: none;
-        
+
+    .btn__products {
+        height: 95%;
+        font-size: 1.2em;
     }
-    
+
+    .contact__info {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: var(--blue-jay-blue);
+        color: var(--blue-jay-white);
+        text-align: center
+    }
+
+     /* **************************************************/
+     .menu__icon {
+        display: none;
+
+    }
+
     .navbar {
         z-index: 1000;
-        position: absolute;
-        top: 100vh;
+        position: relative;
+        top: 0;
         width: 100%;
         padding: 0;
     }
-    
+
     .menu {
         position: relative;
         top: 0;
@@ -557,18 +574,64 @@ p {
     .menu__link {
         display: inline-block;
         text-align: center;
+        font-size: .5em;
     }
-/* ******************************************** */
+
+    /* ******************************************** */
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    .header__name {
+        font-size: 1.7em;
+    }
+
+    .categories {
+        gap: 20px;
+    }
+
+    /* **************************************************/
+    .menu__icon {
+        display: none;
+
+    }
+
+    .navbar {
+        z-index: 1000;
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-family: 'Noto Serif', serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu__link {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    /* ******************************************** */
 }
 
 @media only screen and (min-width : 1024px) {
     .header__name {
         font-size: 1.8em;
     }
-  }
-  
-  @media only screen and (min-width: 1024px) and (orientation: landscape) {
-      .header__name {
-          font-size: 2.5em;
-      }
-  }
+
+
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+    .header__name {
+        font-size: 2.1em;
+    }
+}
