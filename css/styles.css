@@ -34,8 +34,7 @@
 }
 
 body {
-    /* background-color: var(--body-background); */
-    background-color: gray;
+    background-color: var(--body-background);
     font-size: 40px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -46,9 +45,7 @@ p {
 
 /* ++++++++++ HEADER +++++++++++++++ */
 .header {
-    background-image: url('../img/cuadros/Panioleta.jpg');
-    width: 100vw;
-    height: 100vh;
+    background-image: url('../img/cuadros/banner.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -57,8 +54,8 @@ p {
 .header__fondo {
     background-image: url('../img/cuadros/silueta_blanca_costado\ \(copia\).jpg');
     width: 0%;
-    height: 100vh;
     max-width: 100%;
+    height: 100vh;
     background-position: center;
     background-size: cover;
 }
@@ -84,20 +81,28 @@ p {
     z-index: 1000;
     position: absolute;
     top: 0;
-    width: 40%
+    width: 100vw;
+    height: 100vh;
 }
-
+    
 .menu {
     position: absolute;
-    top: -1000PX;
-    left: -0%;
     width: 100%;
+    height: 100vh;
     font-family: 'Noto Serif', serif;
+    font-size: 2em;
+    line-height: .7em;
+    background-color: var(--blue-jay-blue);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: 1s ease all;
+    transform: translateX(-100%)
 }
 
 .menu__icon {
     position: absolute;
-    top: 0;
     left: 0;
     font-size: .4em;
     color: var(--blue-jay-blue);
@@ -105,14 +110,17 @@ p {
     z-index: 2000;
 }
 
-.menu-active .menu__icon {
+.menu-active .menu {
     color: var(--blue-jay-white);
     width: 100%;
     background-color: var(--blue-jay-blue);
+    transform: translateX(0%)
 }
 
-.menu-active .menu {
-    top: .9em
+.menu-active .menu__icon {
+    color: var(--blue-jay-white);
+    /* width: 100%; */
+    background-color: var(--blue-jay-blue);
 }
 
 .menu__link {
@@ -136,13 +144,13 @@ p {
 .container {
     text-align: center;
     margin-top: 10px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 20px
 }
 
 /* ++++++++++ SUBTÍTULO +++++++++++++++ */
-.inspiration__subtitle {
+.subtitle {
     font-size: 20px;
     color: var(--blue);
     font-family: "Noto Serif", serif;
@@ -151,14 +159,14 @@ p {
     text-transform: uppercase;
 }
 
-.inspiration__subtitle span {
+.subtitle span {
     background-color: gainsboro;
     padding: 0px 15px;
     z-index: 99;
     position: relative;
 }
 
-.inspiration__subtitle::after {
+.subtitle::after {
     content: '';
     display: inline-block;
     height: 2px;
@@ -176,7 +184,7 @@ p {
     padding: 20px;
 }
 
-.inspiration__title {
+.title {
     width: 100%;
     font-size: .5em;
     text-transform: uppercase;
@@ -191,9 +199,10 @@ p {
 
 .categories {
     width: 100%;
+    background-color: inherit;
     display: grid;
     gap: 2px;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card__image {
