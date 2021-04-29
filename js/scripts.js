@@ -23,6 +23,7 @@ $(document).ready(function(){
     })
 })
 
+
 const altura = document.body.scrollHeight - window.innerHeight;
 const fondo = document.getElementById('fondo');
 const nombre = document.getElementById('name');
