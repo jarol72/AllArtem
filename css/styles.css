@@ -27,6 +27,11 @@
     --electrik-escape: #607890;
 }
 
+html {
+    scroll-behavior: smooth;
+    max-width: calc(100vw - 25px)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,8 +42,13 @@ body {
     background-color: var(--body-background);
     font-size: 40px;
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin: auto;
 }
 
+.main{
+    max-width: 100%  ;
+}
 p {
     font-size: 22px;
 }
@@ -49,6 +59,7 @@ p {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    max-width: calc(100vw - 25px)
 }
 
 .header__fondo {
@@ -61,20 +72,20 @@ p {
 }
 
 .header__name {
-    width: 100vw;
+    max-width: calc(100vw - 25px);
     height: 100vh;
-    padding: 2vh;
+    padding: 5px    ;
+    color: var(--medium-gray);
     font-size: 1.3em;
     line-height: 3em;
     text-align: center;
     font-weight: 400;
     font-family: 'Noto Serif', serif;
     font-style: italic;
+    mix-blend-mode: hard-light;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--medium-gray);
-    mix-blend-mode: hard-light;
 }
 
 .navbar {
@@ -87,7 +98,7 @@ p {
     
 .menu {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-family: 'Noto Serif', serif;
     font-size: 2em;
@@ -126,7 +137,7 @@ p {
 .menu__link {
     display: block;
     width: 100%;
-    padding: 1vh;
+    padding: 10px;
     font-size: .4em;
     background-color: var(--blue-jay-blue);
     transition: 0.5s ease all;
@@ -181,8 +192,8 @@ p {
 
 /* ++++++++++ QUIEN +++++++++++++++ */
 .inspiration {
-    margin-bottom: 60px;
-    padding: 20px;
+    margin-bottom: .8em;
+    padding: 20px 0;
 }
 
 .title {
@@ -196,6 +207,7 @@ p {
 .container--categories {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .categories {
@@ -268,6 +280,37 @@ p {
     border: 2px solid var(--blue-jay-blue);
 }
 
+/* ++++++++++ WHO +++++++++++++++ */
+.biography {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.biography__artistpic {
+    margin: 0;
+    object-fit: scale-down
+}
+
+.biography__artistpic__image {
+    width: 100%
+}
+
+.biography__text {
+    text-align: justify;
+    font-size: .4em;
+    margin-bottom: 40px;
+}
+
+.biography:not(:focus):first-letter{
+    float:left;
+    font-size:5em;
+    line-height:.68;
+    font-weight:100;
+    margin: .05em .1em 0 0;
+    text-transform:uppercase;
+    font-style:normal;
+}
+
 /* ++++++++++ SEPARATOR +++++++++++++++ */
 .separator {
     text-align: center;
@@ -292,6 +335,11 @@ p {
     font-family: 'Noto Serif', serif;
     font-style: italic;
     padding: 10px;
+}
+
+/* ++++++++++++++ MAP +++++++++++++++++++ */
+.mapframe {
+    border: 1px solid #ddd;
 }
 
 /* ++++++++++ CONTACT INFO +++++++++++++++ */
@@ -532,12 +580,40 @@ p {
 @media only screen and (min-width: 540px) and (orientation: landscape) {
     .header__name {
         font-size: 1.4em;
-    }
+    }                                                   
 }
 
 @media only screen and (min-width : 768px) {
     .header__name {
         font-size: 1.4em;
+    }
+
+    .menu__icon {
+        display: none;
+    }
+
+    .navbar {
+        position: sticky;
+        height: 1.2em;
+        margin: auto;
+    }
+    
+    .menu {
+        width: calc(100vw - 25px);
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-content: center;
+        transform: translateX(0%);
+        flex-direction: row;
+        font-size: .5em;
+        height: 1.2em;
+    }
+
+    .menu__link {
+        text-align: center;
+        /* font-size: .5em; */
+        /* max-width: 80%; */
+        background-color: var(--blue-jay-blue);
     }
 
     .categories {
@@ -546,6 +622,28 @@ p {
 
     .btn__products {
         font-size: 1.2em;
+    }
+
+    .biography {
+        display: block;
+    }
+
+    .biography__artistpic {
+        float: left;
+        margin: 0 25px 0 0;
+        width: 24%
+    }
+    
+    .biography__artistpic__image {
+        width: 100%;
+        border: 1px solid #ccc
+    }
+    
+    .biography__text {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+        font-size: .4em;
     }
 
     .contact__info {
@@ -558,28 +656,7 @@ p {
     }
 
      /* **************************************************/
-     .menu__icon {
-        display: none;
-
-    }
-
-    .navbar {
-        position: relative;
-        height: 1.2em;
-    }
-
-    .menu {
-        transform: translateX(0%);
-        flex-direction: row;
-        font-size: 1em;
-        height: 1.2em;
-    }
-
-    .menu__link {
-        display: inline-block;
-        text-align: center;
-        font-size: .5em;
-    }
+    
 
     .title {
         font-size: .75em;
@@ -589,52 +666,7 @@ p {
         font-size: 1.1em;
     }
 
-    /* ******************************************** */
-}
 
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-    .header__name {
-        font-size: 1.7em;
-    }
-
-    .categories {
-        gap: 20px;
-    }
-
-    /* **************************************************/
-    .menu__icon {
-        display: none;
-
-    }
-
-   /*  .navbar {
-        position: relative;
-        top: 0;
-        width: 100%;
-        padding: 0;
-    } */
-
-    .menu {
-        transform: translateX(0%);
-        width: 100vw;
-        height: 50px;
-        /* position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Noto Serif', serif;
-        display: flex;
-        justify-content: center; */
-    }
-
-    .menu__link {
-        display: inline-block;
-        text-align: center;
-        font-size: 1.5em;
-    }
-
-    /* ******************************************** */
-}
 
 @media only screen and (min-width : 1024px) {
     .header__name {
@@ -652,11 +684,11 @@ p {
 
 @media only screen and (min-width: 1200px){
     .container {
-        max-width: 80%
+        max-width: 80%;
     }
 
     .header__name {
-        font-size: 2.4em;
+        font-size: 2.2em;
     }
 
   
@@ -669,6 +701,6 @@ p {
     }
 
     .contact__info {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
