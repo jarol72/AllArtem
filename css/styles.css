@@ -104,7 +104,8 @@ p {
     justify-content: center;
     text-align: center;
     transition: 1s ease all;
-    transform: translateX(-100%)
+    transform: translateX(-100%);
+    z-index: 2000;
 }
 
 .menu__icon {
@@ -116,11 +117,17 @@ p {
     z-index: 2000;
 }
 
+.menu-active {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
 .menu-active .menu {
     color: var(--blue-jay-white);
     width: 100%;
     background-color: var(--blue-jay-blue);
-    transform: translateX(0%)
+    transform: translateX(0%);
 }
 
 .menu-active .menu__icon {
@@ -419,9 +426,8 @@ p {
     width: 100%;
     height: 300px;
     margin: 5px;
+    overflow: hidden;
 }
-
-
 
 .pic {
     position: relative;
@@ -454,18 +460,14 @@ p {
 }
 
 .back {
-    background-color: #f1f1f1;
-    transform: perspective(600px) rotateY(180deg)
+    background-color: #f1f1f1aa;
+    transform: translateX(-100%);
 }
 
 .back-content {
     color: var(--blue-jay-blue);
     text-align: center;
     width: 100%;
-}
-
-.pic:hover>.front {
-    transform: perspective(600px) rotateY(-180deg)
 }
 
 .pic:hover>.back {
@@ -593,11 +595,10 @@ p {
 
     .navbar {
         position: sticky;
-        top:0;
+        top: 0;
         height: 1.2em;
         margin: auto;
         transform: translateY(0);
-       
     }
     
     .menu {
@@ -702,7 +703,6 @@ p {
     .header__name {
         font-size: 2.2em;
     }
-
   
     .menu__link {
         font-size: .8em;
