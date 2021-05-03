@@ -347,8 +347,70 @@ p {
 
 /* ++++++++++ CONTACT INFO +++++++++++++++ */
 .contact {
-    margin-bottom: 40px;
+    margin-bottom: 40px;  
+    text-align: justify;  
 }
+
+.contact__text__p {
+    margin: 10px 0px;
+}
+
+/* .contact_img {
+    width: 100%
+} */
+
+.contact__img__pic {
+    width: 100%
+}
+
+/* ++++++++++ CONTACT FORM +++++++++++++++ */
+.contact__form__frm {
+    font-size: .55em
+}
+
+.form__input--label {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form__input--text {
+    width: 100%;
+    height: 2.5em;
+    padding: 5px
+}
+
+.form__p {
+    margin-top: 20px;
+}
+
+.form__control-group--radio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: .9em;
+}
+
+.form__control-group--radio > .form__control-group{
+    display: inline;
+    width: 48%;
+    margin: 2px 0px;
+}
+
+.form__input--textarea {
+    width: 100%;
+    resize: none;
+    height: 10em;
+}
+
+.form__input--submit {
+    width: 100%;
+    padding: .5em;
+    background-color: var(--blue-jay-blue);
+    color: var(--blue-jay-white);
+    font-size: .7em;
+}
+
 
 .contact__info {
     width: 100%;
@@ -616,6 +678,8 @@ p {
         background-color: var(--blue-jay-blue);
     }
 
+
+
     .categories {
         gap: 20px;
     }
@@ -623,6 +687,8 @@ p {
     .btn__products {
         font-size: 1.2em;
     }
+
+
 
     .biography {
         display: block;
@@ -644,6 +710,51 @@ p {
         padding: 0;
         text-align: justify;
         font-size: .4em;
+    }
+
+
+    .contact {
+        display: grid;
+        grid-template: repeat(7, 1fr);
+
+        grid-template-areas: "text text text text text text text"
+                             "img img img img form form form"
+                             "img img img img form form form"
+                             "img img img img form form form" 
+    }
+    
+    .contact__text {
+        grid-area: text;
+        /* width: 40%;
+        margin-right: 20px; */
+    }
+
+    .contact__img {
+        grid-area: img;
+        margin-top: 15px;
+        /* display: block;
+        width: 100% */
+    }
+
+    .contact__form {
+        grid-area: form;
+        margin-left: 20px;
+    }
+
+    .form__input--label:first-child {
+        margin-top: 10px;
+    }
+
+    .form__control-group--radio > .form__control-group{
+        width: 33%;
+    }
+
+    .form__input--textarea {
+        height: 12em;
+    }
+
+    .form__input--submit {
+        width: 100%;
     }
 
     .contact__info {

@@ -120,7 +120,7 @@
         </p>
     </div>
 
-    <div class="container contact" id="contact">
+    <!-- <div class="container contact" id="contact">
         <h2 class='subtitle'><span>Contáctame</span></h2>
 
         <div class="mapframe">
@@ -128,7 +128,73 @@
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1983.4181311933705!2d-75.38209162985443!3d6.152678414281168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1618359157751!5m2!1ses-419!2sco"
                 width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+    </div> -->
+    
+    <div class="container" id="contact">
+        <h2 class='subtitle'><span>Contáctame</span></h2>
+
+        <div class="contact">
+            <article class="contact__text">
+                <p class="contact__text__p">¿Te gustaría contratar la elaboración de una obra?</p>
+                <p class="contact__text__p">¿Te gustaría trabajar como modelo?<p/>
+                <p class="contact__text__p">Diligencia el formulario y envíanos tus dudas o comentarios.  Te responderé dentro de las 24 horas siguientes.</p>
+            </article>
+
+            <div class="contact__img">
+                <img src="/img/modelo.png" class="contact__img__pic" alt="modelo.png">
+            </div>
+
+            <article class="contact__form">
+                <form class="contact__form__frm" name="contact" method="POST" data-netlify="true">
+                    <div class="form__control-group">
+                        <label class="form__input--label" id="name">Nombre:</label>
+                        <input class="form__input--text" type="text" name="name" />
+                    </div>
+                    <div class="form__control-group">
+                        <label class="form__input--label">Email:</label>
+                        <input class="form__input--text" type="email" name="email" />
+                    </div>
+                    <p class="form__p">Estoy interesado(a) en:</p>
+                    <div class="form__control-group--radio">
+                        <div class="form__control-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="portrait" class="radio-label">Retrato</label><br>
+                        </div>
+
+                        <div class="form__control-group">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="still-life" class="radio-label">Bodegón</label><br>
+                        </div>                
+                        
+                        <div class="form__control-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="oil" class="radio-label">Óleo</label><br>
+                        </div>
+
+                        <div class="form__control-group">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="watercolor" class="radio-label">Acuarela</label><br>
+                        </div>
+
+                        <div class="form__control-group">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="pastel" class="radio-label">Pastel</label><br>
+                        </div>
+
+                        <div class="form__control-group">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="model" class="radio-label">Ser Modelo</label><br>
+                        </div>
+                    </div>
+                    
+                    <label class="form__input--label">Mensaje:</label>
+                    <textarea class="form__input--textarea" name="message"></textarea>
+                    <button class="form__input--submit" type="submit">Enviar</button>
+                </form>
+            </article>
+        </div>
     </div>
+
     <div class="contact__info">
 
         <div class="contact__info-phone">
