@@ -1,3 +1,4 @@
+// +++++++++++++ ARTWORK GALLERY FILTER ++++++++++++++
 $(document).ready(function(){
     $('.filter__option').click(function(){
         const value = $(this).attr('data-filter');
@@ -23,10 +24,10 @@ $(document).ready(function(){
     })
 })
 
-
+// +++++++++++++ BANNER ANIMATION ++++++++++++++
 const altura = document.body.scrollHeight - window.innerHeight;
 const fondo = document.getElementById('fondo');
-const nombre = document.getElementById('name');
+const nombre = document.getElementById('artistName');
 
 window.onscroll = () => {
     const anchoFondo = (window.pageYOffset / altura) * 900;
