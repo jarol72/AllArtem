@@ -1,13 +1,13 @@
 :root {
     --body-background: #f7f9f7;
-    --blue: #49708A;
+    --blue: #2b7095; /* #49708A; */
     --medium-blue: #88ABC2;
     --light-blue: #D0E0EB;
     --medium-gray: #ccc;
 
     /* Blue jay feather */
     --three-color-black: #1F1F20;
-    --blue-jay-blue: #2B4C7E;
+    --blue-jay-blue: #2b4c7e;
     --blue-jay-accent: #567EBB;
     --blue-jay-gray: #606D80;
     --blue-jay-white: #DCE0E6;
@@ -43,6 +43,7 @@ body {
     font-size: 40px;
     font-family: 'Open Sans', sans-serif;
     margin: auto;
+    overflow-x: hidden
 }
 
 p {
@@ -149,7 +150,7 @@ p {
 }
 
 .menu__link:hover {
-    transform: translateY(9px);
+    transform: scale(115%);
     background-color: var(--blue);
     -webkit-box-shadow: 0px -10px 15px 1px rgba(0,0,0,0.47); 
     box-shadow: 0px -10px 15px 1px rgba(0,0,0,0.47);
@@ -166,7 +167,7 @@ p {
 
 /* ++++++++++ SUBTÍTULO +++++++++++++++ */
 .subtitle {
-    font-size: 20px;
+    font-size: 23px;
     color: var(--blue);
     font-family: "Noto Serif", serif;
     font-weight: 700;
@@ -188,7 +189,7 @@ p {
     width: 100%;
     background-color: var(--blue-jay-blue);
     position: relative;
-    top: -29px;
+    top: -39px;
     z-index: 1;
 }
 
@@ -298,7 +299,7 @@ p {
 }
 
 .biography__text {
-    text-align: justify;
+    text-align: left;
     font-size: .4em;
     margin-bottom: 40px;
     font-family: "Open Sans", sans-serif;
@@ -347,8 +348,16 @@ p {
 
 /* ++++++++++ CONTACT INFO +++++++++++++++ */
 .contact {
-    margin-bottom: 40px;  
-    text-align: justify;  
+    margin: 15px 0 40px;  
+    text-align: left;
+}
+
+.contact__text{
+    margin-bottom: 1rem;
+}
+
+.contact__text--title {
+    text-align: center;
 }
 
 .contact__text__p {
@@ -360,12 +369,26 @@ p {
 } */
 
 .contact__img__pic {
-    width: 100%
+    height: 100%;
+    -webkit-box-shadow: 14px 12px 15px -2px rgba(96,109,128,0.65); 
+    box-shadow: 14px 12px 15px -2px rgba(96,109,128,0.65);
+    width: 100%;
 }
 
+
 /* ++++++++++ CONTACT FORM +++++++++++++++ */
+.contact__form {
+    background-color: var(--blue-jay-white);
+    padding: 0.5em;
+    border: 1px solid var(--blue-jay-blue)
+}
+
+.contact__form--title {
+    text-align: center;
+}
+
 .contact__form__frm {
-    font-size: .55em
+    font-size: .55em;
 }
 
 .form__input--label {
@@ -382,6 +405,10 @@ p {
 
 .form__p {
     margin-top: 20px;
+}
+
+fieldset {
+    padding: 10px;
 }
 
 .form__control-group--radio {
@@ -409,6 +436,10 @@ p {
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
     font-size: .7em;
+}
+
+.form__datamanagement--label {
+    font-size: 1rem;
 }
 
 
@@ -459,8 +490,10 @@ p {
     padding: 5px 10px;
     font-size: .3em;
     list-style: none;
-    background-color: #eee;
-    cursor: pointer
+    background-color: var(--blue-jay-white);
+    cursor: pointer;
+    box-shadow: 3px 3px 3px -2px rgba(96,109,128,0.65);
+
 }
 
 .filter__option-active {
@@ -665,10 +698,10 @@ p {
     
     .menu {
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(4,1fr);
         justify-content: center;
         transform: translateX(0%);
-        flex-direction: row;
+        
         font-size: 1em;
         height: 1.2em;
     }
@@ -684,8 +717,13 @@ p {
         gap: 20px;
     }
 
+    .card__image {
+        box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
+    }
+    
     .btn__products {
         font-size: 1.2em;
+        box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
     }
 
 
@@ -702,13 +740,15 @@ p {
     
     .biography__artistpic__image {
         width: 100%;
-        border: 1px solid #ccc
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        box-shadow: 7px 7px 15px -2px rgba(96,109,128,0.65);
     }
     
     .biography__text {
         width: 100%;
         padding: 0;
-        text-align: justify;
+        text-align: left;
         font-size: .4em;
     }
 
@@ -731,14 +771,20 @@ p {
 
     .contact__img {
         grid-area: img;
-        margin-top: 15px;
+        /* margin-top: 15px; */
         /* display: block;
         width: 100% */
     }
 
     .contact__form {
         grid-area: form;
-        margin-left: 20px;
+    }
+
+    .contact__img__pic {
+        height: 100%;
+        width: 90%;
+        -webkit-box-shadow: 14px 12px 15px -2px rgba(96,109,128,0.65); 
+        box-shadow: 14px 12px 15px -2px rgba(96,109,128,0.65);
     }
 
     .form__input--label:first-child {
@@ -751,10 +797,12 @@ p {
 
     .form__input--textarea {
         height: 12em;
+        margin-top: 1rem
     }
 
     .form__input--submit {
-        width: 100%;
+        width: 50%;
+        margin: 1rem 0;
     }
 
     .contact__info {
@@ -779,6 +827,7 @@ p {
 
     .filter {
         width: 100%;
+        margin-top: 1.25rem;
     }
 
     .filter__option {
