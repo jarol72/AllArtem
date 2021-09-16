@@ -35,9 +35,9 @@ window.onscroll = () => {
         fondo.style.width = anchoFondo + '%';
     }
     if(anchoFondo >= 100) {
-        nombre.style.alignItems = 'flex-end'
+        nombre.style.alignItems = 'flex-end';
     } else {
-        nombre.style.alignItems = 'center'
+        nombre.style.alignItems = 'center';
     }
 }
 
