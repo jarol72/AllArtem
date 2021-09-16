@@ -1,4 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@400;700&family=Text+Me+One&display=swap');
+
 :root {
+    --primary: #04152e;
+    --form-background: #f1f1e6;
+    --font-cursive: 'Great Vibes', cursive;
+    --font-menu: 'Text Me One', sans-serif;
+
     --body-background: #f7f9f7;
     --blue: #2b7095; /* #49708A; */
     --medium-blue: #88ABC2;
@@ -10,7 +18,7 @@
     --blue-jay-blue: #2b4c7e;
     --blue-jay-accent: #567EBB;
     --blue-jay-gray: #606D80;
-    --blue-jay-white: #DCE0E6;
+    --blue-jay-white: #E6EAF0 /*#DCE0E6*/;
 
     /* Devastating loss */
     --devastating-loss: #B8D0DE;
@@ -70,13 +78,15 @@ p {
     width: 100vw;
     height: 100vh;
     padding: 5px    ;
-    color: var(--medium-gray);
-    font-size: 1.3em;
+    color: #fffa; /* var(--medium-gray); */
+    font-family: var(--font-cursive);
+    font-size: 1em;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1vw;
+    text-shadow: 1px 1px 7px black;
     line-height: 3em;
     text-align: center;
-    font-weight: 400;
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
     mix-blend-mode: hard-light;
     display: flex;
     align-items: center;
@@ -91,12 +101,14 @@ p {
     height: 100vh;
     width: 100vw
 }
-    
+
 .menu {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    font-family: 'Noto Serif', serif;
+    font-family: var(--font-menu);/* 'Noto Serif', serif; */
+    /* font-style: italic; */
+    font-weight: bold;
     font-size: 2em;
     line-height: .7em;
     background-color: var(--blue-jay-blue);
@@ -115,7 +127,7 @@ p {
     font-size: .4em;
     color: var(--blue-jay-blue);
     padding: 8px;
-    z-index: 2000;
+    z-index: 3000;
 }
 
 .menu-active {
@@ -146,7 +158,6 @@ p {
     transition: 0.5s ease all;
     color: var(--blue-jay-white);
     text-decoration: none;
-    font-style: italic;
 }
 
 .menu__link:hover {
@@ -169,15 +180,16 @@ p {
 .subtitle {
     font-size: 23px;
     color: var(--blue);
-    font-family: "Noto Serif", serif;
-    font-weight: 700;
+    font-family: var(--font-menu);/* "Noto Serif", serif; */
+    font-weight: bold;
     z-index: 2;
     text-transform: uppercase;
 }
 
 .subtitle span {
     background-color: gainsboro;
-    padding: 0px 15px;
+    letter-spacing: 3px;
+    padding: 5px 15px;
     z-index: 99;
     position: relative;
 }
@@ -295,12 +307,14 @@ p {
 }
 
 .biography__artistpic__image {
-    width: 100%
+    width: 100%;
+    border-radius: 50%;
 }
 
 .biography__text {
     text-align: left;
     font-size: .4em;
+    line-height: 2rem;
     margin-bottom: 40px;
     font-family: "Open Sans", sans-serif;
 }
@@ -376,9 +390,9 @@ p {
 }
 
 
-/* ++++++++++ CONTACT FORM +++++++++++++++ */
+/* ++++++++++ CONTACT  +++++++++++++++ */
 .contact__form {
-    background-color: var(--blue-jay-white);
+    background-color: var(--form-background);
     padding: 0.5em;
     border: 1px solid var(--blue-jay-blue)
 }
@@ -520,8 +534,9 @@ fieldset {
     position: relative;
     width: 100%;
     height: 300px;
-    margin: 5px;
+    margin: 15px;
     overflow: hidden;
+    box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
 }
 
 .pic {
@@ -734,7 +749,7 @@ fieldset {
 
     .biography__artistpic {
         float: left;
-        margin: 0 25px 0 0;
+        margin: 0 60px 0 0;
         width: 24%
     }
     
