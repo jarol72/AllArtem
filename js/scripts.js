@@ -1,6 +1,6 @@
 // +++++++++++++ ARTWORK GALLERY FILTER ++++++++++++++
 $(document).ready(function () {
-  if (window.location.pathname === "/gallery.html") {
+  /* if (window.location.pathname === "/gallery.html") { */
     $(".filter__option").click(function () {
       const value = $(this).attr("data-filter");
       if (value == "all") {
@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(`[data-filter="${sessionStorage.getItem("vblelocal")}"]`).trigger(
       "click"
     );
-  }
+  /* } */
 });
 
 // +++++++++++++ MENÚ ANIMATION ++++++++++++++
