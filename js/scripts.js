@@ -37,10 +37,10 @@ $(document).ready(function () {
 });
 
 // +++++++++++++ BANNER ANIMATION ++++++++++++++
-if (
+/* if (
   window.location.pathname === "/" ||
   window.location.pathname === "/index.html"
-) {
+) { */
   const altura = document.body.scrollHeight - window.innerHeight;
   const fondo = document.getElementById("fondo");
   const nombre = document.getElementById("artistName");
@@ -64,7 +64,7 @@ if (
       console.log(`Session Storage: ` + sessionStorage.getItem("vblelocal"));
     }
   });
-}
+/* } */
 
 /* ++++++++++ ZOOM VIEWER +++++++++++++++ */
 const zoomBtn = document.querySelectorAll(".back");
