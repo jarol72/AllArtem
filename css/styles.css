@@ -726,8 +726,6 @@ fieldset {
         background-color: var(--blue-jay-blue);
     }
 
-
-
     .categories {
         gap: 20px;
     }
@@ -740,8 +738,6 @@ fieldset {
         font-size: 1.2em;
         box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
     }
-
-
 
     .biography {
         display: block;
@@ -854,7 +850,7 @@ fieldset {
         width: 30%;
     }
 
-
+}
 
 @media only screen and (min-width : 1024px) {
     .header__name {
