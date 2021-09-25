@@ -497,6 +497,7 @@ fieldset {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    
 }
 
 .filter__option {
@@ -528,6 +529,7 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 0;
 }
 
 .artwork {
@@ -864,12 +866,22 @@ fieldset {
     .separator__quote {
         font-size: 1.3em;
     }
+    
 }
 
 @media only screen and (min-width: 1200px){
     .container {
         max-width: 80%;
     }
+
+    
+    .filter__container {
+        flex-direction: column;
+        width: max-content;
+        position: fixed;
+        padding-top: 4vh;
+    }
+
 
     .header__name {
         font-size: 2.2em;
