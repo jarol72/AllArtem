@@ -60,7 +60,10 @@ $(document).ready(function () {
   document.addEventListener("click", (e) => {
     if (e.target.matches(".card__overlay")) {
       sessionStorage.setItem("vblelocal", e.target.dataset.category);
-      location = `${location.origin}/gallery.html`;
+      loc = location.href;
+      location = `${loc.substring(0, loc.lastIndexOf('/') + 1)}gallery.html`;
+      console.log(location);
+      /* location = `${location.origin}/gallery.html`; */
       console.log(`Session Storage: ` + sessionStorage.getItem("vblelocal"));
     }
   });
