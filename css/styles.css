@@ -511,6 +511,12 @@ fieldset {
 
 }
 
+.filter__option:hover {
+    background-color: var(--blue-jay-blue);
+    color: var(--blue-jay-white);
+    transform: scaleX(1.2)
+}
+
 .filter__option-active {
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white)
