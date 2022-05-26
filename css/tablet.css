@@ -109,6 +109,13 @@
     width: 44%;
 }
 
+.image-view {
+    z-index: 1500;
+}
+
+.image-box {
+    z-index: 2000;
+}
 /* 
 .filter__option {
     font-size: 1rem;
