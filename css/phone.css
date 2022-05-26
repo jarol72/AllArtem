@@ -530,7 +530,9 @@ body {
 
 .filter__option-active {
     background-color: var(--blue-jay-blue);
-    color: var(--blue-jay-white)
+    color: var(--blue-jay-white);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 /* ++++++++++ GALLERY +++++++++++++++ */
