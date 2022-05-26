@@ -47,10 +47,11 @@ $(document).ready(function () {
 
   window.onscroll = () => {
     const anchoFondo = (window.pageYOffset / altura) * 900;
-    if (fondo) {
+    if (fondo && anchoFondo < 100) {
       fondo.style.width = anchoFondo + "%";
     }
     if (anchoFondo >= 100) {
+      fondo.style.width = "100%";
       nombre.style.alignItems = "flex-end";
     } else {
       nombre.style.alignItems = "center";
@@ -58,7 +59,7 @@ $(document).ready(function () {
   };
 
   document.addEventListener("click", (e) => {
-    if (e.target.matches(".card__overlay")) {
+    if (e.target.matches(".card__overlay") || e.target.matches(".card__overlay__text") || e.target.matches(".btn__products")) {
       sessionStorage.setItem("vblelocal", e.target.dataset.category);
       loc = location.href;
       location = `${loc.substring(0, loc.lastIndexOf('/') + 1)}gallery.html`;

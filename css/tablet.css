@@ -1,0 +1,120 @@
+.header__name {
+    font-size: 4rem;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    height: auto;
+    padding: .5rem;
+    transform: translate(0, 0);
+    font-size: 3rem;
+}
+
+.menu__icon {
+    display: none;
+}
+
+.menu__link {
+    padding: 0;
+}
+
+.categories {
+    gap: 1.25rem;
+}
+
+.card {
+    box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
+}
+
+.biography {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.biography__artistpic {
+    width: 40%;
+}
+
+.biography__artistpic__image {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.biography__text {
+    width: 55%;
+}
+
+.contact__text {
+    width: 100%;
+    display: inline-block;
+}
+
+.contact__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__img {
+    width: 45%;
+}
+
+.contact__img__pic {
+    border-radius: 1.25rem;
+}
+
+.contact__form {
+    width: 50%;
+    display: inline-block;
+}
+
+.contact__info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gallery {
+    width: 80%;
+    padding-top: 0;
+}
+
+.filter {
+    position: fixed;
+    top:50%;
+    width: 10%;
+    transform: translate(0, -50%);
+}
+
+.filter__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.filter__option {
+    font-size: 1rem;
+}
+
+.artwork {
+    width: 44%;
+}
+
+/* 
+.filter__option {
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.artwork {
+    width: 30%;
+} */
