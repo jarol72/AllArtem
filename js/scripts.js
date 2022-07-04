@@ -1,31 +1,30 @@
 // +++++++++++++ ARTWORK GALLERY FILTER ++++++++++++++
 $(document).ready(function () {
-  /* if (window.location.pathname === "/gallery.html") { */
-    $(".filter__option").click(function () {
-      const value = $(this).attr("data-filter");
-      if (value == "all") {
-        $(".artwork").show("1000");
-      } else {
-        $(".artwork")
-          .not("." + value)
-          .hide("1000");
-        $(".artwork")
-          .filter("." + value)
-          .show("1000");
-      }
-    });
+  $(".filter__option").click(function () {
+    const value = $(this).attr("data-filter");
+    if (value == "all") {
+      $(".artwork").show("1000");
+    } else {
+      $(".artwork")
+        .not("." + value)
+        .hide("1000");
+      $(".artwork")
+        .filter("." + value)
+        .show("1000");
+    }
+  });
 
-    // add active class on selected item
-    $(".filter__option").click(function () {
-      $(this)
-        .addClass("filter__option-active")
-        .siblings()
-        .removeClass("filter__option-active");
-    });
+  // add active class on selected item
+  $(".filter__option").click(function () {
+    $(this)
+      .addClass("filter__option-active")
+      .siblings()
+      .removeClass("filter__option-active");
+  });
 
-    $(`[data-filter="${sessionStorage.getItem("vblelocal")}"]`).trigger(
-      "click"
-    );
+  $(`[data-filter="${sessionStorage.getItem("vblelocal")}"]`).trigger(
+    "click"
+  );
   /* } */
 });
 
@@ -37,38 +36,54 @@ $(document).ready(function () {
 });
 
 // +++++++++++++ BANNER ANIMATION ++++++++++++++
-/* if (
-  window.location.pathname === "/" ||
-  window.location.pathname === "/index.html"
-) { */
-  const altura = document.body.scrollHeight - window.innerHeight;
-  const fondo = document.getElementById("fondo");
-  const nombre = document.getElementById("artistName");
+const altura = document.body.scrollHeight - window.innerHeight;
+const fondo = document.getElementById("fondo");
+const nombre = document.getElementById("artistName");
+const deviceWidth = window.innerWidth;
 
-  window.onscroll = () => {
-    const anchoFondo = (window.pageYOffset / altura) * 900;
-    if (fondo && anchoFondo < 100) {
-      fondo.style.width = anchoFondo + "%";
-    }
-    if (anchoFondo >= 100) {
-      fondo.style.width = "100%";
-      nombre.style.alignItems = "flex-end";
+window.onscroll = () => {
+  const anchoFondo = (window.pageYOffset / altura) * 900;
+
+  if (fondo) {
+    if (deviceWidth < 768) {
+      if (anchoFondo < 100) {
+        fondo.style.width = anchoFondo + "%";
+      } else {
+        fondo.style.width = "100%";
+      }
     } else {
-      nombre.style.alignItems = "center";
+      if (anchoFondo < 88) {
+        fondo.style.width = anchoFondo + "%";
+        nombre.style.bottom = 50 - anchoFondo / 2 + "%";
+      } else if (anchoFondo >= 88 && anchoFondo < 100) {
+        nombre.style.bottom = "3.5rem";
+      } else {
+        fondo.style.width = "100%";
+        nombre.style.bottom = "3.5rem";
+      }
     }
-  };
+  }
 
-  document.addEventListener("click", (e) => {
-    if (e.target.matches(".card__overlay") || e.target.matches(".card__overlay__text") || e.target.matches(".btn__products")) {
-      sessionStorage.setItem("vblelocal", e.target.dataset.category);
-      loc = location.href;
-      location = `${loc.substring(0, loc.lastIndexOf('/') + 1)}gallery.html`;
-      console.log(location);
-      /* location = `${location.origin}/gallery.html`; */
-      console.log(`Session Storage: ` + sessionStorage.getItem("vblelocal"));
-    }
-  });
-/* } */
+  if (deviceWidth >= 768) {
+
+  }
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".card__overlay") || 
+      e.target.matches(".card__overlay__text") || 
+      e.target.matches(".btn__products")) {
+        let showCategory = e.target.hasAttribute('data-category')
+                              ? e.target.dataset.categori
+                              : e.target.closest('.card__overlay').dataset.category;
+        console.log(showCategory);
+        sessionStorage.setItem("vblelocal", showCategory);
+        loc = location.href;
+        location = `${loc.substring(0, loc.lastIndexOf('/') + 1)}gallery.html`;
+        /* alert(location);
+        alert(`Session Storage: ` + sessionStorage.getItem("vblelocal")); */
+  }
+});
 
 /* ++++++++++ ZOOM VIEWER +++++++++++++++ */
 const zoomBtn = document.querySelectorAll(".back");
@@ -98,10 +113,10 @@ if (imageView) {
 zoomBtn.forEach(function (btn, index) {
   btn.dataset.image = names[index];
   btn.addEventListener("click", function (e) {
-    if(document.querySelector('[data-filter="all"]').classList.contains('filter__option-active')) {
+    if (document.querySelector('[data-filter="all"]').classList.contains('filter__option-active')) {
       selected = names;
     }
-    
+
     let category = btn.dataset.category;
     zoomBtn.forEach((artwork) => {
       if (artwork.dataset.category === category) {
