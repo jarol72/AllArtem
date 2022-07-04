@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All Artem - Galería de Arte del artista colombiano Jaime Rodríguez. Muestra permanente de su trayectoria y sus obras más importantes.">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@400;700&display=swap"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/phone.css" media="(min-width: 320px)" />
+  <link rel="stylesheet" href="css/phone.css"/>
   <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px)" />
   <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1024px)" />
   <title>Arte+</title>
@@ -24,13 +25,13 @@
 <body>
   <div class="main">
     <div class="header">
+      <h1 class="header__name" id="artistName">Jaime Rodríguez Lopera</h1>
       <div class="header__fondo" id="fondo">
-        <h1 class="header__name" id="artistName">Jaime Rodríguez Lopera</h1>
       </div>
     </div>
 
     <nav class="navbar">
-      <a class="menu__icon" id="menu__icon"><i class="fas fa-bars"></i></a>
+      <span class="menu__icon" id="menu__icon"><i class="fas fa-bars"></i></span>
       <div class="menu">
         <a class="menu__link" href="#">Inicio</a>
         <a class="menu__link" href="#who">Quién soy</a>
@@ -126,11 +127,6 @@
           me he mantenido alejado de las galerías de arte, presenté mi obra en
           una exposición individual en el Recinto del Concejo Municipal de la
           ciudad de Medellín.
-          <!-- <s> Actualmente ha sido preseleccionada una de sus obras en el concurso de
-                        imágenes para el calendario
-                        2019 de la empresa papelera <a href="https://www.hahnemuehle.com">Hahnemühle FineArt GmbH</a> de
-                        Alemania,
-                        entre 900 artistas y más de 2000 obras presentadas</s> -->.
         </p>
       </div>
     </div>
@@ -160,7 +156,7 @@
 
     <div class="contact">
       <section class="contact__text">
-        <h6 class="contact__text--title">Cuéntame cuál es tu interés</h6>
+        <p class="contact__text--title">Cuéntame cuál es tu interés</p>
         <p class="contact__text__p">
           ¿Te gustaría contratar la elaboración de una obra?
         </p>
@@ -176,7 +172,7 @@
         </div>
 
         <section class="contact__form">
-          <h6 class="contact__form--title">Envíame tu mensaje</h6>
+          <p class="contact__form--title">Envíame tu mensaje</p>
           <form class="contact__form__frm" name="contact" method="POST" data-netlify="true">
             <div class="form__control-group">
               <label class="form__input--label" id="contac_name" for="name">Nombre:</label>
@@ -221,8 +217,8 @@
               </div>
             </fieldset>
 
-            <label class="form__input--label">Mensaje:</label>
-            <textarea class="form__input--textarea" name="message"></textarea>
+            <label class="form__input--label" for="message">Mensaje:</label>
+            <textarea class="form__input--textarea" name="message" id="message"></textarea>
             <input class="form__input--submit" type="submit" value="Enviar Mensaje" title="Enviar mensaje" />
             <div class="form__dataManagement">
               <input type="checkbox" id="dataAutorization" class="form__datamanagement--checkbox" />
@@ -237,7 +233,7 @@
 
   <div class="contact__info">
     <div class="contact__info-phone">
-      <a class="contact__link" href="" target="_blank"><i class="fas fa-mobile-alt"></i>+57 3113119114</a>
+      <span class="contact__link" ><i class="fas fa-mobile-alt"></i>+57 3113119114</span>
     </div>
     <div class="contact__info-correo">
       <a class="contact__link" href="mailto:frimmy@gmail.com" target="_blank"><i
