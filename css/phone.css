@@ -75,8 +75,9 @@ body {
 }
 
 .header__name {
+    position: absolute;
     width: 100vw;
-    /* height: 100vh; */
+    height: 100vh;
     padding: 5px;
     color: #fffa; /* var(--medium-gray); */
     font-family: var(--font-cursive);

@@ -40,10 +40,14 @@ const altura = document.body.scrollHeight - window.innerHeight;
 const fondo = document.getElementById("fondo");
 const nombre = document.getElementById("artistName");
 const deviceWidth = window.innerWidth;
+//const anchoFondo = (window.pageYOffset / altura) * 900;
+  
+nombre.style.bottom = "50%";
+nombre.style.transform = "translateY(50%)";
 
 window.onscroll = () => {
   const anchoFondo = (window.pageYOffset / altura) * 900;
-
+  nombre.style.bottom = "50%";
   if (fondo) {
     if (deviceWidth < 768) {
       if (anchoFondo < 100) {
@@ -54,12 +58,12 @@ window.onscroll = () => {
     } else {
       if (anchoFondo < 88) {
         fondo.style.width = anchoFondo + "%";
-        nombre.style.bottom = 50 - anchoFondo / 2 + "%";
+        nombre.style.bottom = 51.5 - anchoFondo / 2 + "%";
       } else if (anchoFondo >= 88 && anchoFondo < 100) {
-        nombre.style.bottom = "1rem";
+        nombre.style.bottom = "2.6rem";
       } else {
         fondo.style.width = "100%";
-        nombre.style.bottom = "1rem";
+        nombre.style.bottom = "2.6rem";
       }
     }
   }
