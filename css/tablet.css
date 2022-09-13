@@ -1,7 +1,8 @@
+
 .header__name {
-    position: absolute;
-    top:50;
+    position: absolute; 
     width: 100%;
+    height: auto;
     font-size: 4rem;
     line-height: normal;
     image-rendering: -webkit-optimize-contrast;
