@@ -1,8 +1,10 @@
 .header__name {
     position: absolute;
+    top:50;
     width: 100%;
     font-size: 4rem;
     line-height: normal;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .navbar {

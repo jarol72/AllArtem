@@ -56,10 +56,10 @@ window.onscroll = () => {
         fondo.style.width = anchoFondo + "%";
         nombre.style.bottom = 50 - anchoFondo / 2 + "%";
       } else if (anchoFondo >= 88 && anchoFondo < 100) {
-        nombre.style.bottom = "3.5rem";
+        nombre.style.bottom = "1rem";
       } else {
         fondo.style.width = "100%";
-        nombre.style.bottom = "3.5rem";
+        nombre.style.bottom = "1rem";
       }
     }
   }
@@ -86,7 +86,8 @@ document.addEventListener("click", (e) => {
 });
 
 /* ++++++++++ ZOOM VIEWER +++++++++++++++ */
-const zoomBtn = document.querySelectorAll(".back");
+$(document).ready(function () {
+  const zoomBtn = document.querySelectorAll(".back");;
 const allImages = document.querySelectorAll(".front");
 const imgNames = document.querySelectorAll(".image");
 const imageView = document.querySelector(".image-view");
@@ -153,3 +154,4 @@ if (nextBtn) {
     currentImageDisplay(selected[currentImageIdx]);
   });
 }
+});
