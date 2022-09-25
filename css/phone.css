@@ -122,6 +122,7 @@ body {
 }
 
 .menu__icon {
+    FONT-VARIANT: JIS90;
     position: absolute;
     left: 0;
     font-size: .7rem;
@@ -161,7 +162,7 @@ body {
 }
 
 .menu__link:hover {
-    transform: scale(115%);
+    /*transform: scale(115%);*/
     background-color: var(--blue);
     -webkit-box-shadow: 0px -10px 15px 1px rgba(0,0,0,0.47); 
     box-shadow: 0px -10px 15px 1px rgba(0,0,0,0.47);
