@@ -53,6 +53,10 @@ const artworks = [
     { category: "lights", src: "1boKyL4_kdx3jW-jMNURj9Nsh8XWxU9mk", alt: "", title: "Torso 1", technique: "Lápiz blanco sobre papel", size: "50 x 70 cm", },
     { category: "lights", src: "18mefkHpj-pby_MEaC1F2RmTZ-zYvDTq5", alt: "", title: "Torso 2", technique: "Lápiz blanco sobre papel", size: "50 x 70 cm", },
     { category: "nudes", src: "1x4ri7g7VIV-Dt6DXW4lhQQ3eGtUCB9lt", alt: "", title: "Verano", technique: "Grafito sobre papel", size: "50 x 35 cm", },
+    {category: "Desnudos",src: "10Lb8Nug3ZcnRo-EcydhbOIFseuUINk0F",alt: "",title: "Sinfonía de placer",technique: "Lápiz sobre papel",size: "50 x 35 cm",},
+    {category: "Retratos",src: "1CzYjJkGWHh0PIrsb3uI3XZw_UGX5IAdv",alt: "",title: "Pepe",technique: "Grafito sobre papel",size: "50 x 35 cm",},
+    {category: "Retratos",src: "1ApGh6BXEvyha5dRJV6yHeGpZOYqkYgrx",alt: "",title: "Zuza",technique: "Grafito sobre papel",size: "50 x 35 cm",},
+    
 
 
 ];
