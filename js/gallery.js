@@ -19,7 +19,7 @@ const artworks = [
     { category: "nudes", src: "1VZIvrGwf5Q_RMNVkCn_WFUG8FH4pEmPq", alt: "", title: "Estudio", technique: "Sepia sobre papel", size: "35 x 50 cm", },
     {category: "POR_DEFINIR",src: "1hWyGJJPSVXoqlCh1ZFZqcmsDFCYBVaYt",alt: "",title: "Explosión roja",technique: "Acrílico",size: "",},
     { category: "portraits", src: "1PIQtO3lgUUqRBgkAJl9cLxitDmP5icXI", alt: "", title: "Fer", technique: "Grafito sobre papel", size: "35 x 40 cm", },
-    { category: "still_life", src: "1aaqlC4CSSPhUM98bIMAUavtXhyLuYxLT", alt: "", title: "Fruto", technique: "Óleo", size: "", },
+    { category: "still_life", src: "1aaqlC4CSSPhUM98bIMAUavtXhyLuYxLT", alt: "", title: "Fruto", technique: "Óleo (2 piezas)", size: "", },
     { category: "lights", src: "1bwu-3aOqPNHBjjH8uKgTjkJR0klQhNjG", alt: "", title: "Génesis", technique: "Lápiz blanco sobre papel", size: "100 x 70 cm", },
     { category: "nudes", src: "12u6QI6YaV5uCgxFwVM9uaZAf1E68E7H2", alt: "", title: "Indiferencia", technique: "Grafito sobre papel", size: "70 x 100 cm", },
     {category: "POR_DEFINIR",src: "1gT5ccsagCg3Zeaw1GWDvwnBMN8PDFqUC",alt: "",title: "La Camisa",technique: "Grafito sobre papel",size: "50 x 70 cm",},
@@ -103,7 +103,7 @@ $gallery.appendChild($fragment);
 $(document).ready(function () {
     $(".filter__option").click(function () {
         const value = $(this).attr("data-filter");
-        if (value == "all") {
+        if (value === "all") {
             $(".artwork").show("1000");
         } else {
             $(".artwork")

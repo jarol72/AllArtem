@@ -72,7 +72,7 @@ function validateForm() {
 
   // Validar que los campos obligatorios no estén vacíos
   if (!name || !email || !message) {
-    alert("Por favor, complete todos los campos obligatorios.");
+    alert("Por favor, complete todos los campos.");
     return false;
   }
 

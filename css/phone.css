@@ -48,6 +48,7 @@ html {
 }
 
 body {
+    position: relative;
     background-color: var(--body-background);
     font-size: 40px;
     font-family: 'Open Sans', sans-serif;
@@ -395,7 +396,8 @@ body {
 .contact__form {
     background-color: var(--form-background);
     padding: 0.5em;
-    border: 1px solid var(--blue-jay-blue)
+    border: 1px solid var(--blue-jay-blue);
+    border-radius: 8px
 }
 
 .contact__form--title {
@@ -416,12 +418,13 @@ body {
 .form__input--text {
     width: 100%;
     height: 2.5em;
-    padding: 5px
+    padding: 5px;
 }
 
 .fieldset {
     margin-top: 20px;
     padding: 10px;
+    border-radius: 4px
 }
 
 .form__control-group--radio {
@@ -472,10 +475,12 @@ body {
 
 
 .contact__info {
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
-    text-align: center
+    text-align: center;
 }
 
 .contact__link {
@@ -503,7 +508,7 @@ body {
     position: fixed;
     top: 0;
     margin: 0 auto;
-    background-color: var(--body-background);
+    /*background-color: var(--body-background);*/
     z-index: 900;
 }
 
@@ -553,6 +558,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .artwork {
@@ -560,6 +566,7 @@ body {
     width: 100%;
     height: 250px;
     margin: 15px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: 7px 7px 10px -2px rgba(96,109,128,0.65);
 }
@@ -577,6 +584,7 @@ body {
     position: relative;
     width: 100%;
     height: 250px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -585,6 +593,7 @@ body {
     width: 100%;
     height: 100%;
     border: 1px solid var(--blue-jay-blue);
+    border-radius: 4px;
     overflow: hidden;
     backface-visibility: hidden;
     position: absolute;
@@ -597,6 +606,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .front {
