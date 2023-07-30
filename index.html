@@ -121,7 +121,7 @@
     <p class="separator__parag">
       <q class="separator__quote">
         Dibujar es rasgar la piel de una hoja en blanco hasta descubrir los
-        personaje y sentimiento que se ocultan en su alma
+        personajes y sentimientos que se ocultan en su alma
       </q>
     </p>
   </div>
@@ -158,7 +158,7 @@
 
         <section class="contact__form">
           <p class="contact__form--title">Envíame tu mensaje</p>
-          <form class="contact__form__frm" name="contact" method="POST" data-netlify="true">
+          <form class="contact__form__frm" name="contact" method="POST" data-netlify="true" onsubmit="return validateForm()">
             <div class="form__control-group">
               <label class="form__input--label" id="contac_name" for="name">Nombre:</label>
               <input class="form__input--text" type="text" name="name" id="name" />
