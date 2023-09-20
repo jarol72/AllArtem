@@ -262,7 +262,8 @@ body {
     transition: .5s ease all;
 }
 
-.card:hover .card__overlay {
+.card:hover .card__overlay,
+.btn__products:hover {
     width: 100%;
     opacity: .8;
     cursor: pointer
@@ -481,6 +482,7 @@ body {
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
     text-align: center;
+    z-index: 10000;
 }
 
 .contact__link {
