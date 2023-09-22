@@ -32,6 +32,10 @@
     padding: 0;
 }
 
+.container {
+    max-width: 650px;
+}
+
 .categories {
     gap: 1.25rem;
 }
@@ -81,13 +85,17 @@
 }
 
 .contact__info {
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: space-evenly;
 }
 
 .gallery {
     width: 80%;
+    margin-left: 130px;
     padding-top: 0;
+    padding-bottom: 4rem;
 }
 
 .filter {
@@ -95,6 +103,9 @@
     top:50%;
     width: 10%;
     transform: translate(0, -50%);
+    padding-bottom: 0;
+    border-bottom: none;
+    box-shadow: none;
 }
 
 .filter__container {
@@ -109,7 +120,7 @@
 }
 
 .artwork {
-    width: 29%;
+    width: 28%;
 }
 
 .image-view {

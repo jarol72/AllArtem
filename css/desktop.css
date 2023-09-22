@@ -2,6 +2,10 @@
     font-size: 5rem;
 }
 
+.container {
+    max-width: 800px;
+}
+
 .contact__text--title {
     margin-bottom: 2rem;
     font-size: 2rem;

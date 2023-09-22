@@ -82,7 +82,7 @@ body {
     padding: 5px;
     color: #fffa; /* var(--medium-gray); */
     font-family: var(--font-cursive);
-    font-size: 3rem;
+    font-size: 3.7rem;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 1vw;
@@ -174,7 +174,7 @@ body {
     text-align: center;
     margin-top: 10px;
     width: 100%;
-    max-width: 900px;
+    max-width: 550px;
     margin: auto;
     padding: 20px
 }
@@ -464,20 +464,20 @@ body {
     margin: .6rem 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .form__datamanagement--checkbox {
     width: 1rem
 }
 .form__datamanagement--label {
+    margin-left: 5px;
     font-size: .6rem;
 }
 
-
 .contact__info {
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     background-color: var(--blue-jay-blue);
     color: var(--blue-jay-white);
@@ -510,8 +510,11 @@ body {
     position: fixed;
     top: 0;
     margin: 0 auto;
-    /*background-color: var(--body-background);*/
+    background-color: var(--body-background);
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #ccc;
     z-index: 900;
+    box-shadow: 0px 15px 10px  var(--body-background);
 }
 
 .filter__container {
@@ -560,7 +563,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2.7rem;
 }
 
 .artwork {
