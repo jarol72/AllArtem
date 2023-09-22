@@ -11,14 +11,24 @@ $(document).ready(function () {
 const altura = document.body.scrollHeight - window.innerHeight;
 const fondo = document.getElementById("fondo");
 const nombre = document.getElementById("artistName");
+const contactInfo = document.querySelector(".contact__info");
 const deviceWidth = window.innerWidth;
+
 //const anchoFondo = (window.pageYOffset / altura) * 900;
   
 nombre.style.bottom = "50%";
 nombre.style.transform = "translateY(50%)";
 
 window.onscroll = () => {
-  const anchoFondo = (window.pageYOffset / altura) * 900;
+  const yScroll = window.scrollY;
+  
+  if(isIndex(location.href) &&  (yScroll / altura < 1 || yScroll / altura === 0)) {
+    contactInfo.style.opacity = "0";
+  } else {
+    contactInfo.style.opacity = "1";
+  }
+
+  const anchoFondo = (window.scrollY / altura) * 900;
   nombre.style.bottom = "50%";
   if (fondo) {
     if (deviceWidth < 768) {
@@ -99,4 +109,18 @@ function validateForm() {
   // Si no deseas enviar el formulario automáticamente mediante JavaScript,
   // entonces asegúrate de devolver true para que el envío continúe normalmente.
   return true;
+}
+
+
+
+// +++++++++++++ VALIDATE IF CURRENT PAGE IS HOME ++++++++++++++
+const isIndex = (url) => {
+  const lastSlash = url.lastIndexOf('/');
+  const currPage = url.substring(lastSlash + 1, lastSlash + 11);
+console.log(currPage);
+  if(currPage === "html.index" || currPage === "") {
+    return true;
+  }
+
+  return false
 }
