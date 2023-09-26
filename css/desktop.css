@@ -3,7 +3,19 @@
 }
 
 .container {
-    max-width: 1200px;
+    /* max-width: 900px; */
+    max-width: 75%;
+}
+
+.biography__artistpic {
+    width: 40%;
+    margin: auto;
+}
+
+.biography__text {
+    width: 55%;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .contact__text--title {

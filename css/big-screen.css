@@ -1,0 +1,11 @@
+.biography__artistpic {
+  width: 30%;
+  margin: auto;
+}
+
+.biography__text {
+  width: 65%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+

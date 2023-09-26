@@ -173,7 +173,7 @@ body {
 .container {
     text-align: center;
     margin-top: 10px;
-    width: 100%;
+    width: 90%;
     max-width: 550px;
     margin: auto;
     padding: 20px
@@ -317,7 +317,7 @@ body {
 }
 
 .biography__text {
-    text-align: left;
+    text-align: justify;
     font-size: 1rem;
     line-height: 1.3rem;
     

@@ -15,7 +15,7 @@ const contactInfo = document.querySelector(".contact__info");
 const deviceWidth = window.innerWidth;
 
 //const anchoFondo = (window.pageYOffset / altura) * 900;
-  
+
 nombre.style.bottom = "50%";
 nombre.style.transform = "translateY(50%)";
 

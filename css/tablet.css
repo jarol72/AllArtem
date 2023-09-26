@@ -33,7 +33,7 @@
 }
 
 .container {
-    max-width: 650px;
+    max-width: 80%;
 }
 
 .categories {
@@ -49,6 +49,7 @@
 
 .biography__artistpic {
     width: 40%;
+    margin: auto;
 }
 
 .biography__artistpic__image {
@@ -57,7 +58,7 @@
 }
 
 .biography__text {
-    width: 55%;
+    width: 100%;
 }
 
 .contact__text {
