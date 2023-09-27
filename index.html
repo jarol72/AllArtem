@@ -150,7 +150,7 @@
 
         <section class="contact__form">
           <p class="contact__form--title">Envíame tu mensaje</p>
-          <form class="contact__form__frm" name="contact" method="POST" data-netlify="true" onsubmit="return validateForm()">
+          <form action="../php/email.php" class="contact__form__frm" name="contact" method="POST" id="contact__form">
             <div class="form__control-group">
               <label class="form__input--label" id="contac_name" for="name">Nombre:</label>
               <input class="form__input--text" type="text" name="name" id="name" />
@@ -201,7 +201,7 @@
               <label for="dataAutorization" class="form__datamanagement--label">Autorizo el tratamiento de mis datos
                 personales</label>
             </div>
-            <input class="form__input--submit" type="submit" value="Enviar Mensaje" title="Enviar mensaje" />
+            <input class="form__input--submit" type="submit" name="send" value="Enviar Mensaje" title="Enviar mensaje" />
           </form>
         </section>
       </section>

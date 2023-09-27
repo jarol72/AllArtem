@@ -1,4 +1,4 @@
-
+/* import validateForm from "./formValidation"; */
 
 // +++++++++++++ MENÚ ANIMATION ++++++++++++++
 $(document).ready(function () {
@@ -74,7 +74,7 @@ document.addEventListener("click", (e) => {
 
 // +++++++++++++ VALIDATE FORM ++++++++++++++
 // JavaScript para validar el formulario
-function validateForm() {
+/* function validateForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
@@ -109,7 +109,7 @@ function validateForm() {
   // Si no deseas enviar el formulario automáticamente mediante JavaScript,
   // entonces asegúrate de devolver true para que el envío continúe normalmente.
   return true;
-}
+} */
 
 
 
@@ -123,4 +123,4 @@ console.log(currPage);
   }
 
   return false
-}
+} 
