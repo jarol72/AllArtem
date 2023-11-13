@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('../partials/_head') %>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <h1 class="header__name" id="artistName">Jaime Rodríguez Lopera</h1>
+      <div class="header__fondo" id="fondo">
+      </div>
+    </div>
+
+    <%- include('../partials/_navbar') %>
+
+      <div class="container">
+        <div class="inspiration">
+          <h2 class="subtitle"><span>¿Qué me inspira?</span></h2>
+          <q class="title">Honrar la perfección de la figura humana a través del arte</q>
+        </div>
+
+        <h2 class="subtitle"><span>Categorías</span></h2>
+
+        <div class="container--categories">
+          <div class="categories">
+            <figure class="card">
+              <img class="card__image" src="http://drive.google.com/uc?export=view&id=1ATPbCX7pnxBWxasnfTa67rRUs7WZn8T0"
+                alt="Category: Portraits" loading="lazy" />
+              <figcaption class="card__overlay" data-category="portraits">
+                <p class="card__overlay__text">Retratos</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <img class="card__image" src="http://drive.google.com/uc?export=view&id=1dXHWGj_LXdtW8rraN2raTtdipxPEO7kj"
+                alt="Category: Nudes" loading="lazy" />
+              <figcaption class="card__overlay" data-category="nudes">
+                <p class="card__overlay__text">Desnudos</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <img class="card__image" src="http://drive.google.com/uc?export=view&id=1hTdiLym9SoKCEwDO6OiiJTAwzVVrnAHs"
+                alt="Category: Lights" loading="lazy" />
+              <figcaption class="card__overlay" data-category="lights">
+                <p class="card__overlay__text">Luz</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <img class="card__image" src="http://drive.google.com/uc?export=view&id=1wv8AF6D7FfySckWkg5SFlJODF98t0uuS"
+                alt="Category: Animals" loading="lazy" />
+              <figcaption class="card__overlay" data-category="animals">
+                <p class="card__overlay__text">Animales</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <img class="card__image" src="http://drive.google.com/uc?export=view&id=1aaqlC4CSSPhUM98bIMAUavtXhyLuYxLT"
+                alt="Category: Still Life" loading="lazy" />
+              <figcaption class="card__overlay" data-category="still_life">
+                <p class="card__overlay__text">Bodegones</p>
+              </figcaption>
+            </figure>
+
+            <button class="btn__products" data-category="all">Ver todas las obras</button>
+          </div>
+        </div>
+
+        <h2 class="subtitle" id="who"><span>Quién soy</span></h2>
+
+        <div class="biography">
+          <div class="biography__artistpic">
+            <img class="biography__artistpic__image" loading="lazy" src="img/jaime-alberto-rodriguez-lopera.jpg"
+              alt="Fotografía del artista Jaime Alberto Rodríguez Lopera" />
+          </div>
+
+          <p class="biography__text">
+            Nací en Medellín, Colombia. Desde pequeño sentí gran interés por el
+            dibujo y la pintura, por lo cual decidí estudiar en el
+            <a href="http://www.bellasartesmed.edu.co/">Instituto de Bellas Artes</a>
+            de Medellín (IBA), entre los años 1982 y 1985. En el Instituto
+            aprendí el manejo de diferentes técnicas como carboncillo, lápiz,
+            óleo, acuarela y pastel entre otras, al tiempo que participaba en
+            las exposiciones colectivas anuales organizadas por el IBA. Mi obra
+            hiperrealista la he desarrollado principalmente a lápiz sobre
+            papeles finos, sobre la figura humana y retratos, los cuales procuro
+            manejar con delicadeza y fina elegancia. Mis obras se encuentra en
+            colecciones privadas tanto en Colombia como en el exterior y, aunque
+            me he mantenido alejado de las galerías de arte, presenté mi obra en
+            una exposición individual en el Recinto del Concejo Municipal de la
+            ciudad de Medellín.
+          </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="separator">
+    <p class="separator__parag">
+      <q class="separator__quote">
+        Dibujar es rasgar la piel de una hoja en blanco hasta descubrir los
+        personajes y sentimientos que se ocultan en su alma
+      </q>
+    </p>
+  </div>
+
+  <div class="container" id="contact">
+    <h2 class="subtitle"><span>Contáctame</span></h2>
+
+    <div class="contact">
+      <section class="contact__text">
+        <p class="contact__text--title">Cuéntame cuál es tu interés</p>
+        <p class="contact__text__p">
+          ¿Te gustaría contratar la elaboración de una obra?
+        </p>
+        <p class="contact__text__p">¿Te gustaría trabajar como modelo?</p>
+        <p class="contact__text__p">
+          Diligencia el formulario y envíanos tus dudas o comentarios. Te
+          responderé dentro de las 24 horas siguientes.
+        </p>
+      </section>
+      <section class="contact__main">
+        <div class="contact__img">
+          <img src="img/modelo.png" class="contact__img__pic" alt="drawing session with live model" />
+        </div>
+
+        <section class="contact__form">
+          <p class="contact__form--title">Envíame tu mensaje</p>
+          <form action="/send-email" class="contact__form__frm" name="contact" method="POST" id="contact__form">
+            <div class="form__control-group">
+              <label class="form__input--label" id="contac_name" for="name">Nombre:</label>
+              <input class="form__input--text" type="text" name="name" id="name" value="Jorge" />
+            </div>
+            <div class="form__control-group">
+              <label class="form__input--label" for="email">Email:</label>
+              <input class="form__input--text" type="email" name="email" id="email" value="jarol72@gmail.com" />
+            </div>
+            <fieldset class="fieldset">
+              <legend class="form__p">&nbspEstoy interesado(a) en:&nbsp </legend>
+              <div class="form__control-group--radio">
+                <div class="form__control-group">
+                  <input type="radio" id="portrait" name="tema" value="Retrato" />
+                  <label for="portrait" class="radio-label">Retrato</label><br />
+                </div>
+
+                <div class="form__control-group">
+                  <input type="radio" id="still-life" name="tema" value="Bodegón" checked />
+                  <label for="still-life" class="radio-label">Bodegón</label><br />
+                </div>
+
+                <div class="form__control-group">
+                  <input type="radio" id="oil" name="tema" value="Oleo" />
+                  <label for="oil" class="radio-label">Óleo</label><br />
+                </div>
+
+                <div class="form__control-group">
+                  <input type="radio" id="watercolor" name="tema" value="Acuarela" />
+                  <label for="watercolor" class="radio-label">Acuarela</label><br />
+                </div>
+
+                <div class="form__control-group">
+                  <input type="radio" id="pastel" name="tema" value="Pastel" />
+                  <label for="pastel" class="radio-label">Pastel</label><br />
+                </div>
+
+                <div class="form__control-group">
+                  <input type="radio" id="model" name="tema" value="Ser modelo" />
+                  <label for="model" class="radio-label">Ser Modelo</label><br />
+                </div>
+              </div>
+            </fieldset>
+            <label class="form__input--label" for="message">Mensaje:</label>
+            <textarea class="form__input--textarea" name="message" id="message" value="flsajfñlasj"></textarea>
+
+            <div class="form__dataManagement">
+              <input type="checkbox" id="dataAutorization" class="form__datamanagement--checkbox" />
+              <label for="dataAutorization" class="form__datamanagement--label">Autorizo el tratamiento de mis datos personales</label>
+            </div>
+            <input class="form__input--submit" type="submit" name="send" value="Enviar Mensaje"
+              title="Enviar mensaje" />
+          </form>
+          <% if (typeof success !=='undefined' && success) { %>
+            <span id="mailSuccess">Mensaje enviado correctamente</span>
+            <% } %>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <%- include('../partials/_contact-info') %>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "allartem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --env-file .env server.js"
+  },
+  "keywords": [
+    "art",
+    "artist",
+    "pencil",
+    "human",
+    "body",
+    "animals",
+    "portraits",
+    "artwork"
+  ],
+  "author": "Jorge A. Rodríguez Lopera",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,1 +1,6 @@
 /libwebp
+.env
+node_modules
+btns
+cuadros
+gallery

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/_head') %>
+</head>
+
+<body>
+    
+    <%- include('../partials/_navbar') %>
+
+    <section class="filter">
+        <ul class="filter__container">
+            <li class="filter__option filter__option-active" data-filter="all">Todas</li>
+            <li class="filter__option" data-filter="portraits">Retratos</li>
+            <li class="filter__option" data-filter="nudes">Desnudos</li>
+            <li class="filter__option" data-filter="lights">Luz</li>
+            <li class="filter__option" data-filter="animals">Animales</li>
+            <li class="filter__option" data-filter="still_life">Bodegones</li>
+        </ul>
+    </section>
+
+    <div class="container gallery" id="gallery">
+        <template id="template">
+            <article class='artwork'>
+                <div class="pic">
+                    <div class="front">
+                        <img class='image' loading="lazy">
+                    </div>
+                    <div class="back" >
+                        <div class="back-content middle">
+                            <h3 id="artworkTitle"></h3>
+                            <p id="artworkTechnique"></p>
+                            <p id="artworkSize"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </template>
+        
+        <!-- zoom and slider -->
+
+        <div class="image-view"></div>
+
+        <div class="image-box">
+            <div id="prev-btn"></div>
+            <div id="next-btn"></div>
+        </div>
+    </div>
+
+    <%- include('../partials/_contact-info') %>
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/gallery.js" type="module"></script>
+    
+</body>
+
+</html>
