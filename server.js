@@ -87,7 +87,11 @@ app.post('/send-email', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           console.error(error);
-          return res.status(500).send('Sorry, there was an error sending your message.');
+          res.render('pages/index', {
+            title: 'Inicio',
+            success: false
+          });
+          // return res.status(500).send('Sorry, there was an error sending your message.');
       } else {
           console.log('Email sent: ' + info.response);
           res.render('pages/index', {

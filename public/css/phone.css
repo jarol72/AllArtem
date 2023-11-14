@@ -487,6 +487,18 @@ body {
     border-radius: 5px;
 }
 
+#mailFail {
+    padding: 0.5rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: .5em;
+    font-weight: bold;
+    color: red;
+    background-color: rgba(176, 128, 128, 0.355);
+    border-radius: 5px;
+}
+
 .contact__info {
     /* position: fixed;
     bottom: 0; */

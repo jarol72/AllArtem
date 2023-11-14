@@ -183,6 +183,8 @@
           </form>
           <% if (typeof success !=='undefined' && success) { %>
             <span id="mailSuccess">Mensaje enviado correctamente</span>
+            <% } else { %>
+              <span id="mailFail">Error: El mensaje no fue enviado</span>
             <% } %>
         </section>
       </section>
